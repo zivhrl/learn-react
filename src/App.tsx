@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.scss';
 import ListGroup from './components/ListGroup';
 import { Summary } from './components/Summary';
+import { UseRefTest } from './components/UseRefTest';
 
 function App() {
   const items: { id: number; name: string }[] = [
@@ -25,13 +26,18 @@ function App() {
     console.log(selectedList);
   };
 
+  // return (
+  //   <div>
+  //     <ListGroup items={items} title="Menu" onSelectItem={handleSelectItem} />
+  //     {/* {selectedList.map((item) => (
+  //       <p>{item}</p>
+  //     ))} */}
+  //     <Summary items={selectedList as string[]} />
+  //   </div>
+  // );
   return (
     <div>
-      <ListGroup items={items} title="Menu" onSelectItem={handleSelectItem} />
-      {/* {selectedList.map((item) => (
-        <p>{item}</p>
-      ))} */}
-      <Summary items={selectedList as string[]} />
+      <UseRefTest />
     </div>
   );
 }
